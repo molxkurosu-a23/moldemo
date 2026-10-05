@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>電脳黒影祭典 ― エピローグ ―</title>
+<style>
+*{box-sizing:border-box}
+html,body{
+    margin:0;
+    width:100%;
+    height:100%;
+    background:#000;
+    color:#eee;
+    font-family:"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif;
+    overflow:hidden;
+}
+body{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+#epilogue{
+    width:100%;
+    height:100%;
+    background:#000;
+    text-align:center;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:30px;
+}
+.epi-line{
+    position:absolute;
+    width:min(850px,88vw);
+    opacity:0;
+    transform:translateY(8px);
+    transition:opacity 1.4s ease,transform 1.4s ease;
+    font-size:clamp(15px,2.2vw,24px);
+    line-height:2.2;
+    letter-spacing:.12em;
+}
+.epi-line.show{
+    opacity:1;
+    transform:translateY(0);
+}
+.epi-title{
+    font-size:clamp(22px,3vw,34px);
+    letter-spacing:.25em;
+}
+.epi-em{
+    font-size:clamp(18px,2.7vw,30px);
+    letter-spacing:.2em;
+}
+.epi-final{
+    font-size:clamp(22px,3.4vw,38px);
+    letter-spacing:.25em;
+    text-shadow:0 0 25px rgba(255,255,255,.35);
+}
+</style>
+</head>
+<body>
+<section id="epilogue">
+    <div id="e1" class="epi-line epi-title">――黒影トークン</div>
+    <div id="e2" class="epi-line">ある日、何の前触れもなく、<br>ひとつの黒きコインが現れた。</div>
+    <div id="e3" class="epi-line">それは、古の黒影祭典で失われたとされる秘宝――<br><span class="epi-em">「黒影トークン」。</span></div>
+    <div id="e4" class="epi-line">なぜ、それが現れたのか。<br>誰がそこへ導いたのか。</div>
+    <div id="e5" class="epi-line">その答えを知る者は、誰もいない。</div>
+    <div id="e6" class="epi-line">ただひとつ確かなことがある。</div>
+    <div id="e7" class="epi-line">黒影トークンは、選ばれし者の手の中でのみ、<br>その紋章を輝かせる。</div>
+    <div id="e8" class="epi-line">その瞬間、眠っていた電脳の回路が目を覚ます。</div>
+    <div id="e9" class="epi-line">遠い昔に閉ざされた黒影祭典の記録が、<br>現代の電脳世界へと再接続されていく。</div>
+    <div id="e10" class="epi-line epi-final">――そして、三つの門が開く。</div>
+</section>
+
+<script>
+const ids=['e1','e2','e3','e4','e5','e6','e7','e8','e9','e10'];
+
+ids.forEach((id,i)=>{
+    setTimeout(()=>{
+        ids.forEach(prevId=>{
+            document.getElementById(prevId).classList.remove('show');
+        });
+        document.getElementById(id).classList.add('show');
+    }, i*3500);
+});
+</script>
+</body>
+</html>
