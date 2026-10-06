@@ -17,7 +17,7 @@ body{display:flex;align-items:center;justify-content:center;overflow:hidden}
 .frame:before,.frame:after{content:"";position:absolute;width:35px;height:35px;z-index:3;pointer-events:none}
 .frame:before{left:0;top:0;border-left:2px solid #00eaff;border-top:2px solid #00eaff}
 .frame:after{right:0;bottom:0;border-right:2px solid #ff00dd;border-bottom:2px solid #ff00dd}
-iframe{display:block;width:100%;height:100%;border:0}
+iframe{display:block;width:100%;height:100%;border:0;filter:none;background:#000;position:relative;z-index:5}.frame{isolation:isolate}
 .back{display:inline-block;margin-top:18px;padding:10px 22px;border:1px solid rgba(0,220,255,.55);color:#9defff;text-decoration:none;font-size:12px;letter-spacing:.12em;background:rgba(0,20,40,.55)}
 .back:hover{box-shadow:0 0 18px rgba(0,220,255,.35);transform:translateY(-1px)}
 .note{font-size:9px;color:#68758a;margin-top:10px;letter-spacing:.08em}
@@ -30,8 +30,8 @@ iframe{display:block;width:100%;height:100%;border:0}
   <div class="title">―― 開 幕 予 告 映 像 ――</div>
   <div class="frame">
     <iframe
-      src="https://drive.google.com/file/d/171fzjpDtuI_nK7UBuuv3-0Tz_TCNKdSa/preview"
-      allow="autoplay; fullscreen"
+      src="https://drive.google.com/file/d/1TTcvSbqQ_WM4lg_6WCQ4bnkXSALTgOVY/preview"
+      allow="autoplay; fullscreen; picture-in-picture"
       allowfullscreen>
     </iframe>
   </div>
