@@ -119,9 +119,9 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;background-ima
 <script>
 const TEST_MODE=false;
 const gates={
-  1:{open:"2026-10-10T12:30:00+09:00",close:"2026-10-16T12:30:00+09:00"},
-  2:{open:"2026-10-17T12:30:00+09:00",close:"2026-10-23T12:30:00+09:00"},
-  3:{open:"2026-10-24T12:30:00+09:00",close:"2026-10-31T12:30:00+09:00"}
+  1:{open:"2026-10-07T12:30:00+09:00",close:"2026-10-08T12:30:00+09:00"},
+  2:{open:"2026-10-08T12:30:00+09:00",close:"2026-10-09T12:30:00+09:00"},
+  3:{open:"2026-10-09T12:30:00+09:00",close:"2026-10-10T12:30:00+09:00"}
 };
 function isOpen(n){if(TEST_MODE)return true;const now=new Date();return now>=new Date(gates[n].open)&&now<new Date(gates[n].close)}
 function formatGateTime(n){
